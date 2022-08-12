@@ -39,7 +39,7 @@ void reconnect() {
     Serial.print("Attempting MQTT connection...");
     
     // Attempt to connect
-    if (client.connect("ESP8266Client")) {
+    if (client.connect(clientID, mqtt_username, mqtt_password)) {
       Serial.println("connected");  
       // Subscribe or resubscribe to a topic
       // You can subscribe to more topics (to control more LEDs in this example)
